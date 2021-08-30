@@ -56,7 +56,10 @@ function draw() {
    }
    if(invisibleBlockGroup.isTouching(ghost) || ghost.y > 600){
     ghost.destroy();
-    
+    tower.destroy();
+    doorsGroup.destroyEach();
+    climbersGroup.destroyEach();
+    invisibleBlockGroup.destroyEach();
     gameState = "end";
    }
 
